@@ -1,6 +1,3 @@
--- Made by zachs edited by kode
-
-
 Players = game:GetService("Players")
 Workspace = game:GetService("Workspace")
 UserInputService = game:GetService("UserInputService")
@@ -1611,7 +1608,7 @@ local function PlayInterpolatedAnimation(Model, SpeedMultiplier, ghostOriginalMo
 
 
     return {
-        Stop = function() forceStop = true task.cancel(animationTask) end,
+        Stop = function() forceStop = true task.cancel(animationTask) playingFakeAnimation = nil end,
         Pause = function() Paused = true end,
         Resume = function() Paused = false end,
         AdjustSpeed = function(speed) SpeedMultiplier = speed end,
