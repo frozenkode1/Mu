@@ -1447,7 +1447,6 @@ local function playFakeAnimation(animationId)
 	   playingFakeAnimation.Stop()
 	end
     end
-    wait(0.1)
     cloneSize = 1
     cloneWidth = 1    updateCloneScale()
 
@@ -1608,7 +1607,7 @@ local function PlayInterpolatedAnimation(Model, SpeedMultiplier, ghostOriginalMo
 
 
     return {
-        Stop = function() forceStop = true task.cancel(animationTask) playingFakeAnimation = nil end,
+        Stop = function() forceStop = true fakeAnimSpeed = SpeedMultiplier task.cancel(animationTask) playingFakeAnimation = nil end,
         Pause = function() Paused = true end,
         Resume = function() Paused = false end,
         AdjustSpeed = function(speed) SpeedMultiplier = speed end,
