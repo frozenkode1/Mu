@@ -1447,6 +1447,7 @@ local function playFakeAnimation(animationId)
 	   playingFakeAnimation.Stop()
 	end
     end
+    task.wait()
     cloneSize = 1
     cloneWidth = 1    updateCloneScale()
 
