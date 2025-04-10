@@ -1358,6 +1358,11 @@ local function setGhostEnabled(newState)
         end)
 
     else
+	loadedAnimationLength = nil
+    	loadedJointMap = nil
+    	loadedposeData = nil
+    	loadedAnimationid = nil
+
         if updateConnection then
             updateConnection:Disconnect()
             updateConnection = nil
