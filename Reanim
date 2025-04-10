@@ -2460,7 +2460,7 @@ local function createDraggableGui(getGhostEnabled, toggleGhost, getSizeValue, se
             local animId = fakeAnimTextBox.Text
             loadFakeAnimation(animId)
         else
-            --warn("No fake character available!")
+            warn("No fake character available!")
        end
     end)
     fakeAnimButton.MouseButton1Click:Connect(function()
