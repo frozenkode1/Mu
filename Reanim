@@ -1,3 +1,5 @@
+--some stuff made by zachs, mostly edited by kode
+
 Players = game:GetService("Players")
 Workspace = game:GetService("Workspace")
 UserInputService = game:GetService("UserInputService")
@@ -2454,15 +2456,12 @@ local function createDraggableGui(getGhostEnabled, toggleGhost, getSizeValue, se
     stopFakeAnimButton.Parent = fakeAnimSection
 
     loadAnimButton.MouseButton1Click:Connect(function()
-	local animId = fakeAnimTextBox.Text
-        loadFakeAnimation(animId)
-
-        --if ghostClone then
-            --local animId = fakeAnimTextBox.Text
-            --loadFakeAnimation(animId)
-        --else
+        if ghostClone then
+            local animId = fakeAnimTextBox.Text
+            loadFakeAnimation(animId)
+        else
             --warn("No fake character available!")
-       --end
+       end
     end)
     fakeAnimButton.MouseButton1Click:Connect(function()
         if ghostClone and loadedAnimationid then
